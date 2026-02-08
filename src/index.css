@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  background-color: rgba(243, 243, 250, 1);
+  font-family: "Tajawal", sans-serif;
+  scroll-behavior: smooth;
+}
+@keyframes soft-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.animate-soft-bounce {
+  animation: soft-bounce 4s ease-in-out infinite;
+}
+.flex-1 {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 3s ease-in-out infinite;
+}
+.grid > div:nth-child(even) img {
+  animation-delay: 1s;
+}
+
